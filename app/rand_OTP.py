@@ -17,7 +17,7 @@ def create_otp_number(size: int = 6) -> str:
             res.append(random.choice(dnums))
 
         for _ in range(size - (rsize*3)):
-            res.append(1)
+            res.append(secrets.randbelow(10))
     elif size == 2:
         res.append(secrets.randbelow(10))
         res.append(secrets.randbelow(10))
